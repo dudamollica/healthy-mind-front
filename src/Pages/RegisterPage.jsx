@@ -17,7 +17,7 @@ export default function Register() {
         e.preventDefault();
         setLoading(true);
         const URL =
-            process.env.REACT_APP_API_URL;
+            `http://localhost:5000/cadastro`;
         const body = { email, name, image, password };
         const promise = axios.post(URL, body);
         promise.then((res) => {
@@ -39,6 +39,15 @@ export default function Register() {
             <FormStyle onSubmit={submitRegister}>
                 <InputForm
                     disabled={loading ? true : false}
+                    placeholder="nome"
+                    type="text"
+                    required
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                ></InputForm>
+
+                <InputForm
+                    disabled={loading ? true : false}
                     placeholder="email"
                     type="email"
                     required
@@ -57,17 +66,8 @@ export default function Register() {
 
                 <InputForm
                     disabled={loading ? true : false}
-                    placeholder="nome"
-                    type="text"
-                    required
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                ></InputForm>
-
-                <InputForm
-                    disabled={loading ? true : false}
                     placeholder="foto"
-                    type="url"
+                    type="file"
                     required
                     value={image}
                     onChange={(e) => setImage(e.target.value)}

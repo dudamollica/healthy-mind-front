@@ -9,16 +9,15 @@ export const ContainerRegistrations = w.div(`
 `)
 
 export const LogoStyle = w.div(`
-bg-white
 flex
 items-center
 justify-center
 pt-10
-pb-10
+pb-6
 `);
 
 export const LogoImg = w.img(`
-h-60
+h-52
 `)
 
 export const FormStyle = w.form(`
@@ -30,6 +29,7 @@ items-center
 
 export const InputForm = w.input(`
 border-none
+bg-white
 rounded-md
 w-80
 h-12
@@ -58,8 +58,8 @@ export const LinkStyle = w.div(`
   flex
   items-center
   justify-center;
-  margin-top: 25px;
   text-ligth-green
   underline
-  mt-2
+  mt-1.5
+  mb-7
 `);
