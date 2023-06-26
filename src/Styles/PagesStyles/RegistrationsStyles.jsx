@@ -40,8 +40,8 @@ pl-1.5
 
 export const ButtonForm = w.button(`
   rounded-md
-  bg-ligth-green
-  border-ligth-green
+  bg-light-green
+  border-light-green
   font-semibold
   w-72
   h-11
@@ -58,7 +58,7 @@ export const LinkStyle = w.div(`
   flex
   items-center
   justify-center;
-  text-ligth-green
+  text-light-green
   underline
   mt-1.5
   mb-7

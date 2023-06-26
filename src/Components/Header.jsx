@@ -1,9 +1,12 @@
 import dayjs from "dayjs"
 import Logo from "../Assets/mind.png"
 import { HeaderStyle, UserImg, LogoImg, DateText } from "../Styles/ComponentsStyles/HeaderStyle";
-import { LinkStyle } from "../Styles/PagesStyles/RegistrationsStyles";
+import {AuthContext} from "../AppContext/auth"
+import { useContext } from "react";
 
 export default function Header() {
+    const { userImg } = useContext(AuthContext);
+
     function wichDay() {
         switch (dayjs().day()) {
             case 0:
@@ -30,8 +33,7 @@ export default function Header() {
             <DateText>
                 {wichDay()},<br></br> {dayjs().date()}/{dayjs().month() + 1}
             </DateText>
-            {/* <UserImg src={userImg} /> */}
-            <UserImg src={"https://static.vecteezy.com/ti/vetor-gratis/p1/2275847-avatar-masculino-perfil-icone-de-homem-caucasiano-sorridente-vetor.jpg"} />
+            <UserImg src={userImg} />
         </HeaderStyle>
     )
 }

@@ -66,8 +66,8 @@ export default function Register() {
 
                 <InputForm
                     disabled={loading ? true : false}
-                    placeholder="foto"
-                    type="file"
+                    placeholder="url da foto de perfil"
+                    type="url"
                     required
                     value={image}
                     onChange={(e) => setImage(e.target.value)}

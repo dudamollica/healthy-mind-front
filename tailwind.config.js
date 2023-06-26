@@ -8,8 +8,9 @@ export default {
     extend: {},
     colors: {
       'dark-blue': '#152238',
-      'ligth-green': '#7ed957',
-      'white':'#FFFFFF'
+      'light-green': '#7ed957',
+      'white':'#FFFFFF',
+      'ligth-grey': '#EBEBEB'
     },
   },
   plugins: [],
