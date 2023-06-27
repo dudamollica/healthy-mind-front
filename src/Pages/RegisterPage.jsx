@@ -17,7 +17,7 @@ export default function Register() {
         e.preventDefault();
         setLoading(true);
         const URL =
-            `http://localhost:5000/cadastro`;
+            `${import.meta.env.VITE_APP_API_URL}cadastro`;
         const body = { email, name, image, password };
         const promise = axios.post(URL, body);
         promise.then((res) => {

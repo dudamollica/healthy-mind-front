@@ -17,7 +17,7 @@ export default function Login() {
         e.preventDefault();
         setLoading(true);
         const URL =
-            "http://localhost:5000/";
+            import.meta.env.VITE_APP_API_URL;
         const body = { email, password };
         const promise = axios.post(URL, body);
         promise.then((res) => {
